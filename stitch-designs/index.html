@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpardimedia — UI Designs (Google Stitch)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#5045e8" },
+          fontFamily: { sans: ["Inter", "sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Header -->
+  <div class="bg-white border-b border-gray-200 px-8 py-5 flex items-center gap-4">
+    <div class="bg-primary/10 p-2 rounded-lg">
+      <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <div>
+      <h1 class="text-lg font-bold text-gray-900">Alpardimedia — UI Designs</h1>
+      <p class="text-sm text-gray-500">Generado con Google Stitch · 12 pantallas · Marzo 2026</p>
+    </div>
+    <div class="ml-auto flex items-center gap-3 text-sm text-gray-500">
+      <span class="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">Tailwind CSS</span>
+      <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full font-medium">Inter Font</span>
+      <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full font-medium">Material Icons</span>
+    </div>
+  </div>
+
+  <!-- Design Tokens -->
+  <div class="px-8 py-6 bg-white border-b border-gray-100">
+    <h2 class="text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide">Design Tokens</h2>
+    <div class="flex flex-wrap gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg shadow-sm" style="background:#5045e8"></div>
+        <div>
+          <div class="text-xs font-medium text-gray-700">Primary</div>
+          <div class="text-xs text-gray-400">#5045e8</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg border border-gray-200 shadow-sm" style="background:#f6f6f8"></div>
+        <div>
+          <div class="text-xs font-medium text-gray-700">Background Light</div>
+          <div class="text-xs text-gray-400">#f6f6f8</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg shadow-sm" style="background:#121121"></div>
+        <div>
+          <div class="text-xs font-medium text-gray-700">Background Dark</div>
+          <div class="text-xs text-gray-400">#121121</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg border border-gray-200 shadow-sm" style="background:#ffffff"></div>
+        <div>
+          <div class="text-xs font-medium text-gray-700">Card / White</div>
+          <div class="text-xs text-gray-400">#ffffff</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg border border-gray-100 shadow-sm" style="background:#0f172a"></div>
+        <div>
+          <div class="text-xs font-medium text-gray-700">Slate 900</div>
+          <div class="text-xs text-gray-400">Text dark</div>
+        </div>
+      </div>
+      <div class="ml-8 flex items-center gap-6 text-sm text-gray-500">
+        <div><span class="font-medium text-gray-700">Font:</span> Inter (300–700)</div>
+        <div><span class="font-medium text-gray-700">Icons:</span> Material Symbols Outlined</div>
+        <div><span class="font-medium text-gray-700">Framework:</span> Tailwind CSS v3</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-8 py-8">
+
+    <!-- Auth Screens -->
+    <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Autenticación</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+      <a href="pantalla_de_login_alpardimedia/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="pantalla_de_login_alpardimedia/screen.png" alt="Login" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Login</h3>
+            <span class="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full">Público</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Iniciar sesión con email y contraseña</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Dashboard -->
+    <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Dashboard</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+      <a href="dashboard_de_usuario_alpardimedia/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="dashboard_de_usuario_alpardimedia/screen.png" alt="Dashboard" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Dashboard</h3>
+            <span class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">Protegido</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Lista de proyectos del usuario y estadísticas</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+      <a href="dashboard_con_proyecto_creado/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="dashboard_con_proyecto_creado/screen.png" alt="Dashboard con proyecto" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Dashboard (Proyecto creado)</h3>
+            <span class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">Protegido</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Dashboard tras generar web con Smart Builder</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Editor Visual -->
+    <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Editor Visual (Módulo 2)</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+      <a href="editor_visual_alpardimedia/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="editor_visual_alpardimedia/screen.png" alt="Editor Visual" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Editor Visual</h3>
+            <span class="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full">Editor</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Canvas + sidebar de bloques (Drag & Drop)</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+      <a href="editor_visual_con_panel_de_propiedades_1/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="editor_visual_con_panel_de_propiedades_1/screen.png" alt="Editor + Propiedades 1" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Editor + Panel Propiedades v1</h3>
+            <span class="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full">Editor</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Panel lateral derecho con ajustes del bloque</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+      <a href="editor_visual_con_panel_de_propiedades_2/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="editor_visual_con_panel_de_propiedades_2/screen.png" alt="Editor + Propiedades 2" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Editor + Panel Propiedades v2</h3>
+            <span class="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full">Editor</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Variante con más opciones de estilo del bloque</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Smart Builder -->
+    <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Smart Builder Wizard (Módulo 3) — 6 Pasos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+      <a href="smart_builder_selecci_n_de_sector/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="smart_builder_selecci_n_de_sector/screen.png" alt="Smart Builder - Sector" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Paso 1 — Sector</h3>
+            <span class="text-xs bg-orange-50 text-orange-600 px-2 py-0.5 rounded-full">20%</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">¿A qué se dedica tu negocio?</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+      <a href="smart_builder_wizard_alpardimedia/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="smart_builder_wizard_alpardimedia/screen.png" alt="Smart Builder - Estilo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Paso 2 — Estilo Visual</h3>
+            <span class="text-xs bg-orange-50 text-orange-600 px-2 py-0.5 rounded-full">40%</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Moderno, Espiritual, Corporativo, Creativo</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+      <a href="smart_builder_nombre_y_descripci_n/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="smart_builder_nombre_y_descripci_n/screen.png" alt="Smart Builder - Nombre" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Paso 3 — Nombre y Descripción</h3>
+            <span class="text-xs bg-orange-50 text-orange-600 px-2 py-0.5 rounded-full">40%</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Nombre del negocio y descripción de la actividad</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+      <a href="smart_builder_selecci_n_de_p_ginas/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="smart_builder_selecci_n_de_p_ginas/screen.png" alt="Smart Builder - Páginas" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Paso 4 — Selección de Páginas</h3>
+            <span class="text-xs bg-orange-50 text-orange-600 px-2 py-0.5 rounded-full">60%</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Inicio, Servicios, Sobre Mí, Contacto, Blog...</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+      <a href="smart_builder_textos_clave/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="smart_builder_textos_clave/screen.png" alt="Smart Builder - Textos" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Paso 5 — Textos Clave</h3>
+            <span class="text-xs bg-orange-50 text-orange-600 px-2 py-0.5 rounded-full">80%</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Eslogan, descripción y CTA con vista previa</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+      <a href="smart_builder_im_genes_y_contacto/code.html" target="_blank" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all">
+        <div class="aspect-video bg-gray-100 overflow-hidden">
+          <img src="smart_builder_im_genes_y_contacto/screen.png" alt="Smart Builder - Imágenes" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-gray-900 text-sm">Paso 6 — Imágenes y Contacto</h3>
+            <span class="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full">100%</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Logo, portada, email, teléfono y redes sociales</p>
+          <div class="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">Ver código →</div>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="border-t border-gray-200 bg-white px-8 py-4 text-center text-xs text-gray-400">
+    Generado con <strong class="text-gray-600">Google Stitch</strong> · Proyecto <strong class="text-gray-600">Alpardimedia</strong> · Stack: Laravel 11 + Angular 17 · Color primario: <code class="bg-gray-100 px-1 rounded">#5045e8</code>
+  </div>
+
+</body>
+</html>

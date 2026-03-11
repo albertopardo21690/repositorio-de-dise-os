@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5045e8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .step-active {
+            @apply bg-primary text-white;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex flex-col min-h-screen">
+<!-- Top Navigation -->
+<header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Alpardimedia</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col">
+<!-- Progress Bar Section -->
+<div class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Paso 4 de 5</span>
+<span class="text-xs font-semibold text-slate-500">80% completado</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 80%"></div>
+</div>
+</div>
+</div>
+<div class="flex-grow flex flex-col md:flex-row max-w-7xl mx-auto w-full">
+<!-- Form Section (Left) -->
+<div class="w-full md:w-1/2 p-6 md:p-10 border-r border-slate-200 dark:border-slate-800 overflow-y-auto">
+<div class="max-w-md">
+<h2 class="text-3xl font-black text-slate-900 dark:text-white mb-4">Textos Clave</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+                            Define los mensajes principales que verán tus visitantes. Estos textos son fundamentales para tu propuesta de valor.
+                        </p>
+<form class="space-y-8">
+<!-- Field 1 -->
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
+<span class="flex items-center justify-center size-5 bg-primary/10 text-primary rounded text-[10px]">1</span>
+                                    Eslogan Principal (Title)
+                                </label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="Ej: Transformamos tu visión en realidad digital" type="text" value="Transformamos tu visión en realidad digital"/>
+</div>
+<!-- Field 2 -->
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
+<span class="flex items-center justify-center size-5 bg-primary/10 text-primary rounded text-[10px]">2</span>
+                                    Subtítulo o Descripción breve
+                                </label>
+<textarea class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none" placeholder="Ej: Expertos en desarrollo web y diseño UX para negocios modernos." rows="3">Expertos en desarrollo web y diseño UX para negocios modernos.</textarea>
+</div>
+<!-- Field 3 -->
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300">
+<span class="flex items-center justify-center size-5 bg-primary/10 text-primary rounded text-[10px]">3</span>
+                                    Texto del Botón Principal (CTA)
+                                </label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="Ej: Empezar ahora" type="text" value="Empezar ahora"/>
+</div>
+</form>
+</div>
+</div>
+<!-- Preview Section (Right) -->
+<div class="w-full md:w-1/2 p-6 md:p-10 bg-slate-50 dark:bg-slate-900/50 flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-500">Vista Previa de Estructura</h3>
+<div class="flex gap-1">
+<div class="size-2 rounded-full bg-slate-300"></div>
+<div class="size-2 rounded-full bg-slate-300"></div>
+<div class="size-2 rounded-full bg-slate-300"></div>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center">
+<!-- Simulated Hero Section -->
+<div class="w-full max-w-lg bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-700 aspect-video flex flex-col relative group">
+<!-- Nav Mockup -->
+<div class="px-6 py-4 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center opacity-40">
+<div class="w-20 h-4 bg-slate-200 dark:bg-slate-600 rounded"></div>
+<div class="flex gap-3">
+<div class="w-10 h-3 bg-slate-200 dark:bg-slate-600 rounded"></div>
+<div class="w-10 h-3 bg-slate-200 dark:bg-slate-600 rounded"></div>
+</div>
+</div>
+<!-- Hero Content Mockup -->
+<div class="flex-grow flex flex-col items-center justify-center text-center px-10 space-y-4">
+<!-- Title Preview -->
+<div class="relative group/field border-2 border-dashed border-primary/40 p-2 rounded-lg bg-primary/5">
+<span class="absolute -top-3 -left-3 size-6 bg-primary text-white rounded-full flex items-center justify-center text-[10px] font-bold">1</span>
+<h4 class="text-xl font-extrabold text-slate-900 dark:text-white leading-tight">Transformamos tu visión en realidad digital</h4>
+</div>
+<!-- Subtitle Preview -->
+<div class="relative group/field border-2 border-dashed border-primary/40 p-2 rounded-lg bg-primary/5 w-full max-w-xs mx-auto">
+<span class="absolute -top-3 -left-3 size-6 bg-primary text-white rounded-full flex items-center justify-center text-[10px] font-bold">2</span>
+<p class="text-sm text-slate-500 dark:text-slate-400">Expertos en desarrollo web y diseño UX para negocios modernos.</p>
+</div>
+<!-- Button Preview -->
+<div class="relative group/field border-2 border-dashed border-primary/40 p-2 rounded-lg bg-primary/5 inline-block">
+<span class="absolute -top-3 -left-3 size-6 bg-primary text-white rounded-full flex items-center justify-center text-[10px] font-bold">3</span>
+<div class="bg-primary text-white px-6 py-2 rounded-lg font-bold text-xs shadow-lg shadow-primary/30">
+                                        Empezar ahora
+                                    </div>
+</div>
+</div>
+<!-- Overlay Hint -->
+<div class="absolute inset-0 bg-primary/5 backdrop-blur-[1px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+<span class="bg-slate-900 text-white px-4 py-2 rounded-full text-xs font-medium shadow-xl">Mapping visual interactivo</span>
+</div>
+</div>
+</div>
+<div class="mt-8 p-4 bg-primary/5 rounded-xl border border-primary/10">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">info</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-normal italic">
+                                La vista previa es una representación estructural. Podrás personalizar colores, fuentes e imágenes en el editor final.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-4">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<button class="flex items-center gap-2 px-6 py-3 text-slate-600 dark:text-slate-400 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Anterior
+                </button>
+<button class="flex items-center gap-2 px-8 py-3 bg-primary text-white font-bold rounded-xl hover:shadow-lg hover:shadow-primary/40 transition-all">
+                    Siguiente
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5045e8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .canvas-bg { background-color: #1e1e2e; }
+        .sidebar-dark { background-color: #0f0f1a; }
+        .sidebar-item:hover { background-color: rgba(80, 69, 232, 0.1); }
+        .active-tool { border-left: 3px solid #5045e8; background-color: rgba(80, 69, 232, 0.1); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display overflow-hidden">
+<div class="flex flex-col h-screen">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between h-16 px-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-50">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">auto_fix_high</span>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold tracking-tight">Alpardimedia</h2>
+</div>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2 text-slate-500">
+<span class="material-symbols-outlined text-sm">folder</span>
+<span class="text-sm font-medium">Mi Web</span>
+<span class="material-symbols-outlined text-xs">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
+<button class="p-1.5 rounded bg-white dark:bg-slate-700 shadow-sm text-primary">
+<span class="material-symbols-outlined">desktop_windows</span>
+</button>
+<button class="p-1.5 rounded text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">
+<span class="material-symbols-outlined">tablet_android</span>
+</button>
+<button class="p-1.5 rounded text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">
+<span class="material-symbols-outlined">phone_iphone</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                Vista previa
+            </button>
+<button class="px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                Guardar
+            </button>
+<button class="px-6 py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all">
+                Publicar
+            </button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Left Sidebar -->
+<aside class="w-72 sidebar-dark text-slate-300 flex flex-col border-r border-slate-800 overflow-y-auto">
+<div class="p-6 space-y-8">
+<!-- Category: Estructura -->
+<section>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Estructura</h3>
+<div class="space-y-1">
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-xl">view_headline</span>
+<span>Header</span>
+</button>
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item active-tool transition-all text-sm font-medium text-white">
+<span class="material-symbols-outlined text-primary text-xl">star</span>
+<span>Hero</span>
+</button>
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-xl">page_footer</span>
+<span>Footer</span>
+</button>
+</div>
+</section>
+<!-- Category: Contenido -->
+<section>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Contenido</h3>
+<div class="space-y-1">
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400 text-xl">article</span>
+<span>Texto</span>
+</button>
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400 text-xl">image</span>
+<span>Imagen</span>
+</button>
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400 text-xl">gallery_thumbnail</span>
+<span>Galería</span>
+</button>
+</div>
+</section>
+<!-- Category: Conversión -->
+<section>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Conversión</h3>
+<div class="space-y-1">
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400 text-xl">ads_click</span>
+<span>CTA</span>
+</button>
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400 text-xl">mail</span>
+<span>Contacto</span>
+</button>
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400 text-xl">forum</span>
+<span>Testimonios</span>
+</button>
+<button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400 text-xl">payments</span>
+<span>Precios</span>
+</button>
+</div>
+</section>
+</div>
+<div class="mt-auto p-6 border-t border-slate-800">
+<div class="flex items-center gap-3 p-3 bg-slate-900 rounded-xl">
+<div class="size-8 rounded-full bg-primary flex items-center justify-center text-xs font-bold text-white uppercase">AM</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-white">Alex Alpardimedia</span>
+<span class="text-[10px] text-slate-500">Plan Pro</span>
+</div>
+<span class="material-symbols-outlined text-slate-600 ml-auto text-sm">settings</span>
+</div>
+</div>
+</aside>
+<!-- Central Canvas -->
+<main class="flex-1 canvas-bg p-12 overflow-y-auto flex flex-col items-center">
+<!-- Page Container -->
+<div class="w-full max-w-[1000px] bg-white shadow-2xl min-h-[1400px] flex flex-col rounded-sm">
+<!-- Canvas Header Block -->
+<nav class="flex items-center justify-between px-10 py-6 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">bolt</span>
+</div>
+<span class="font-black text-xl tracking-tighter uppercase">Spark.</span>
+</div>
+<div class="flex items-center gap-8">
+<a class="text-sm font-semibold text-slate-600 hover:text-primary" href="#">Inicio</a>
+<a class="text-sm font-semibold text-slate-600 hover:text-primary" href="#">Servicios</a>
+<a class="text-sm font-semibold text-slate-600 hover:text-primary" href="#">Blog</a>
+<a class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-lg" href="#">Contacto</a>
+</div>
+</nav>
+<!-- Canvas Hero Block -->
+<section class="relative px-12 py-24 text-center overflow-hidden">
+<div class="relative z-10 max-w-2xl mx-auto">
+<h1 class="text-5xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                            Crea tu sitio web <span class="text-primary">profesional</span>
+</h1>
+<p class="text-lg text-slate-500 mb-10 leading-relaxed">
+                            La plataforma más intuitiva para construir tu presencia digital sin necesidad de escribir una sola línea de código. Rápido, seguro y optimizado.
+                        </p>
+<div class="flex items-center justify-center gap-4">
+<button class="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-xl shadow-primary/20">Empezar ahora</button>
+<button class="px-8 py-4 bg-slate-100 text-slate-700 font-bold rounded-xl hover:bg-slate-200">Ver demo</button>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/5 -skew-y-3 origin-left -translate-y-24"></div>
+</section>
+<!-- Canvas Services Block -->
+<section class="px-12 py-20 bg-slate-50/50">
+<div class="grid grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">brush</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-3">Diseño Adaptable</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                                Tu sitio web se verá perfecto en cualquier dispositivo: móviles, tablets y ordenadores de escritorio.
+                            </p>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">speed</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-3">Carga Ultra Rápida</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                                Optimizamos cada elemento para que tus visitantes no tengan que esperar ni un segundo.
+                            </p>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">search</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-3">SEO Optimizado</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                                Aparece en los primeros resultados de búsqueda gracias a nuestras herramientas integradas.
+                            </p>
+</div>
+</div>
+</section>
+<!-- Image Placeholder -->
+<section class="p-12">
+<div class="w-full aspect-video bg-slate-100 rounded-2xl flex items-center justify-center overflow-hidden border border-dashed border-slate-300">
+<div class="flex flex-col items-center gap-3 text-slate-400">
+<span class="material-symbols-outlined text-5xl">image</span>
+<span class="text-sm font-medium">Haz clic para subir una imagen</span>
+</div>
+<div class="hidden">
+<img class="w-full h-full object-cover" data-alt="Modern office interior with clean workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsSXlkOTix36W6rdQr9n5O1s7j_AS8EyANGRcbFhrIYDzlMi6hDWsp2UtNQjL8BdjAIYYNMAQGltX-pFJTdm4O618kal0qDQpgI273iQMLIBhyPJRRNXkKS07AA_W8I27NZjqRhCrEVOFk5uh0ZVmPZh05De-tUlMLrp75p9r9kuW8VFliTIBt56g4w4uXbJD4TnU3LRc3p0icR2B6uLqXf5WZv-UcWvYhHRtn4GFB1qKxJe0MnGti8AJXDSG536dLZ9HqxnvZLMgZ"/>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Right Configuration Sidebar -->
+<aside class="w-80 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-6 overflow-y-auto">
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white mb-4">Configuración del Bloque</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-6 uppercase tracking-wider font-bold">Estilos Hero</p>
+<div class="space-y-6">
+<!-- Alineación -->
+<div class="space-y-2">
+<label class="text-xs font-semibold text-slate-700 dark:text-slate-300">Alineación</label>
+<div class="flex gap-2 p-1 bg-slate-100 dark:bg-slate-800 rounded-lg">
+<button class="flex-1 py-1.5 flex justify-center bg-white dark:bg-slate-700 rounded shadow-sm text-primary">
+<span class="material-symbols-outlined text-sm">format_align_left</span>
+</button>
+<button class="flex-1 py-1.5 flex justify-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-sm">format_align_center</span>
+</button>
+<button class="flex-1 py-1.5 flex justify-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-sm">format_align_right</span>
+</button>
+</div>
+</div>
+<!-- Color de Fondo -->
+<div class="space-y-2">
+<label class="text-xs font-semibold text-slate-700 dark:text-slate-300">Color de Fondo</label>
+<div class="flex items-center gap-3 border border-slate-200 dark:border-slate-700 p-2 rounded-lg bg-white dark:bg-slate-800">
+<div class="size-6 rounded bg-slate-50 border border-slate-200 dark:border-slate-600" style="background-color: #F8FAFC;"></div>
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">#F8FAFC</span>
+<span class="material-symbols-outlined text-sm ml-auto text-slate-400">colorize</span>
+</div>
+</div>
+<!-- Padding Vertical -->
+<div class="space-y-2">
+<label class="text-xs font-semibold text-slate-700 dark:text-slate-300">Padding Vertical</label>
+<input class="w-full accent-primary h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer" type="range"/>
+<div class="flex justify-between text-[10px] text-slate-400 font-bold px-0.5">
+<span>SM</span>
+<span>MD</span>
+<span>LG</span>
+<span>XL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Button -->
+<div class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
+<button class="w-full py-3 flex items-center justify-center gap-2 text-primary bg-primary/5 hover:bg-primary/10 rounded-xl text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                    Añadir Elemento
+                </button>
+</div>
+</aside>
+</div>
+</div>
+</body></html>

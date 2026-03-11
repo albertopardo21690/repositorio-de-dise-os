@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alpardimedia Smart Builder - Paso 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5045e8",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#121121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-10 py-4">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">architecture</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight">Alpardimedia <span class="text-primary">Smart Builder</span></h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:block text-right">
+<p class="text-sm font-semibold">Alex Rivera</p>
+<p class="text-xs text-slate-500">Plan Pro</p>
+</div>
+<div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden border-2 border-primary/20">
+<img class="h-full w-full object-cover" data-alt="User profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALYCSbKUmxDR4TavFIEXj6bsOYzCCx5IFa0duCD0pgJrpOypvU1mNfMIuvf6nMHaK7TcReW82d7NqK2vpWSQeeAGPS4uQx9SC2Xm-7kVZHbk6sPBIY8bLQmR5tv0zucExCetUpDELjfmHqR1m6ycbxX4BtdDvhH1MqUiYUV7jE7rVBtjb-2ielOKYVSORQNTcsL6A3qyQfwv0OxXQge55HxELohkLsyyz8ZT8ZTcW7aVcBqnRrfwE-a5qo8hLZZPzuXVodMe7DC0ur"/>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="mx-auto max-w-7xl px-6 py-8 md:px-10">
+<!-- Progress Stepper -->
+<div class="mb-10 max-w-2xl">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm font-semibold text-primary uppercase tracking-wider">Paso 3 de 5</span>
+<span class="text-sm font-bold text-slate-600 dark:text-slate-400">60% completado</span>
+</div>
+<div class="h-2 w-full rounded-full bg-slate-200 dark:bg-slate-800">
+<div class="h-full rounded-full bg-primary" style="width: 60%;"></div>
+</div>
+<p class="mt-2 text-sm text-slate-500">Selección de Páginas y Secciones</p>
+</div>
+<div class="grid grid-cols-1 gap-10 lg:grid-cols-12">
+<!-- Selection Area -->
+<div class="lg:col-span-8">
+<div class="mb-8">
+<h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-4xl">¿Qué páginas quieres incluir?</h1>
+<p class="mt-3 text-lg text-slate-600 dark:text-slate-400">Selecciona las secciones fundamentales para tu sitio web. Podrás añadir más tarde desde el editor.</p>
+</div>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+<!-- Selected Card (Inicio) -->
+<div class="group relative flex cursor-pointer flex-col justify-between rounded-xl border-2 border-primary bg-white dark:bg-slate-900 p-5 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">home</span>
+</div>
+<div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+<div class="mt-6">
+<h3 class="font-bold text-slate-900 dark:text-white">Inicio</h3>
+<p class="mt-1 text-sm text-slate-500">Página principal obligatoria</p>
+</div>
+</div>
+<!-- Unselected Card (Servicios) -->
+<div class="group relative flex cursor-pointer flex-col justify-between rounded-xl border-2 border-transparent bg-white dark:bg-slate-900 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 transition-all hover:border-primary/50 hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">design_services</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary/50"></div>
+</div>
+<div class="mt-6">
+<h3 class="font-bold text-slate-900 dark:text-white">Servicios</h3>
+<p class="mt-1 text-sm text-slate-500">Muestra lo que ofreces</p>
+</div>
+</div>
+<!-- Card (Sobre Nosotros) -->
+<div class="group relative flex cursor-pointer flex-col justify-between rounded-xl border-2 border-transparent bg-white dark:bg-slate-900 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 transition-all hover:border-primary/50">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-primary/10 group-hover:text-primary">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary/50"></div>
+</div>
+<div class="mt-6">
+<h3 class="font-bold text-slate-900 dark:text-white">Sobre Nosotros</h3>
+<p class="mt-1 text-sm text-slate-500">Tu historia y equipo</p>
+</div>
+</div>
+<!-- Card (Blog) -->
+<div class="group relative flex cursor-pointer flex-col justify-between rounded-xl border-2 border-transparent bg-white dark:bg-slate-900 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 transition-all hover:border-primary/50">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-primary/10 group-hover:text-primary">
+<span class="material-symbols-outlined text-2xl">article</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary/50"></div>
+</div>
+<div class="mt-6">
+<h3 class="font-bold text-slate-900 dark:text-white">Blog</h3>
+<p class="mt-1 text-sm text-slate-500">Noticias y artículos</p>
+</div>
+</div>
+<!-- Card (Portafolio) -->
+<div class="group relative flex cursor-pointer flex-col justify-between rounded-xl border-2 border-transparent bg-white dark:bg-slate-900 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 transition-all hover:border-primary/50">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-primary/10 group-hover:text-primary">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary/50"></div>
+</div>
+<div class="mt-6">
+<h3 class="font-bold text-slate-900 dark:text-white">Portafolio</h3>
+<p class="mt-1 text-sm text-slate-500">Tus mejores trabajos</p>
+</div>
+</div>
+<!-- Card (Contacto) -->
+<div class="group relative flex cursor-pointer flex-col justify-between rounded-xl border-2 border-transparent bg-white dark:bg-slate-900 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 transition-all hover:border-primary/50">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-primary/10 group-hover:text-primary">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary/50"></div>
+</div>
+<div class="mt-6">
+<h3 class="font-bold text-slate-900 dark:text-white">Contacto</h3>
+<p class="mt-1 text-sm text-slate-500">Formulario y mapa</p>
+</div>
+</div>
+<!-- Card (Testimonios) -->
+<div class="group relative flex cursor-pointer flex-col justify-between rounded-xl border-2 border-transparent bg-white dark:bg-slate-900 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 transition-all hover:border-primary/50">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-primary/10 group-hover:text-primary">
+<span class="material-symbols-outlined text-2xl">reviews</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary/50"></div>
+</div>
+<div class="mt-6">
+<h3 class="font-bold text-slate-900 dark:text-white">Testimonios</h3>
+<p class="mt-1 text-sm text-slate-500">Opiniones de clientes</p>
+</div>
+</div>
+<!-- Card (FAQ) -->
+<div class="group relative flex cursor-pointer flex-col justify-between rounded-xl border-2 border-transparent bg-white dark:bg-slate-900 p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 transition-all hover:border-primary/50">
+<div class="flex items-start justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-primary/10 group-hover:text-primary">
+<span class="material-symbols-outlined text-2xl">quiz</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary/50"></div>
+</div>
+<div class="mt-6">
+<h3 class="font-bold text-slate-900 dark:text-white">FAQ</h3>
+<p class="mt-1 text-sm text-slate-500">Preguntas frecuentes</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Preview -->
+<div class="lg:col-span-4">
+<div class="sticky top-28 rounded-2xl bg-white dark:bg-slate-900 p-6 shadow-xl ring-1 ring-slate-200 dark:ring-slate-800">
+<h3 class="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Vista previa de estructura
+                            </h3>
+<div class="mt-6 space-y-2">
+<p class="text-xs font-semibold text-slate-400 dark:text-slate-500 ml-4 mb-2">MENÚ DE NAVEGACIÓN</p>
+<!-- Nav Item Mockup -->
+<div class="group flex items-center justify-between rounded-lg bg-primary/5 px-4 py-3 text-primary border border-primary/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lg">home</span>
+<span class="font-semibold">Inicio</span>
+</div>
+<span class="material-symbols-outlined text-lg">drag_indicator</span>
+</div>
+<!-- Empty state or hints for other selections -->
+<div class="flex items-center justify-between rounded-lg border border-dashed border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-400 opacity-60">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span class="text-sm">Selecciona otra página...</span>
+</div>
+</div>
+<div class="mt-10 rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4">
+<div class="flex items-center gap-3 mb-4">
+<div class="h-2 w-2 rounded-full bg-primary"></div>
+<span class="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase">Orden de flujo</span>
+</div>
+<div class="space-y-3 relative before:absolute before:left-2 before:top-2 before:h-[calc(100%-16px)] before:w-[2px] before:bg-slate-200 dark:before:bg-slate-700">
+<div class="relative pl-7 text-sm font-medium text-slate-700 dark:text-slate-300">
+<div class="absolute left-0 top-1 h-4 w-4 rounded-full border-2 border-primary bg-white dark:bg-slate-900"></div>
+                                            Hero &amp; Introducción
+                                        </div>
+<div class="relative pl-7 text-sm font-medium text-slate-400 dark:text-slate-500">
+<div class="absolute left-0 top-1 h-4 w-4 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"></div>
+                                            Sección de Valor
+                                        </div>
+<div class="relative pl-7 text-sm font-medium text-slate-400 dark:text-slate-500">
+<div class="absolute left-0 top-1 h-4 w-4 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"></div>
+                                            Llamada a la Acción (CTA)
+                                        </div>
+</div>
+</div>
+</div>
+<div class="mt-8 rounded-lg bg-slate-900 p-4 text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm">info</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter opacity-70">Tip del Experto</span>
+</div>
+<p class="text-xs leading-relaxed opacity-90 italic">"Mantén tu menú principal con menos de 6 ítems para mejorar la conversión."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Navigation -->
+<footer class="sticky bottom-0 z-50 border-t border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-6 md:px-10">
+<div class="mx-auto flex max-w-7xl items-center justify-between">
+<button class="group flex items-center gap-2 rounded-xl px-6 py-3 font-bold text-slate-600 dark:text-slate-400 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-xl transition-transform group-hover:-translate-x-1">arrow_back</span>
+                    Anterior
+                </button>
+<button class="flex items-center gap-2 rounded-xl bg-primary px-8 py-3 font-bold text-white shadow-lg shadow-primary/30 transition-all hover:scale-[1.02] hover:bg-primary/90 active:scale-95">
+                    Siguiente
+                    <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</div>
+</footer>
+</div>
+</body></html>
